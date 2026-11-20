@@ -229,6 +229,21 @@ elements:
   - name: x2
   - name: y2
 
+- name: linearGradient
+  container: true
+  attributeGroups:
+  - core
+  - presentation
+  attributes:
+  - name: gradientUnits
+  - name: gradientTransform
+  - name: href
+  - name: spreadMethod
+  - name: x1
+  - name: y1
+  - name: x2
+  - name: y2
+
 - name: marker
   container: true
   attributeGroups:
@@ -356,6 +371,30 @@ elements:
   - name: y
   - name: width
   - name: height
+
+- name: radialGradient
+  container: true
+  attributeGroups:
+  - core
+  - presentation
+  attributes:
+  - name: gradientUnits
+  - name: gradientTransform
+  - name: href
+  - name: spreadMethod
+  - name: cx
+  - name: cy
+  - name: r
+  - name: fx
+  - name: fy
+  - name: fr
+
+- name: stop
+  container: true
+  attributes:
+  - name: offset
+  - name: stop-color
+  - name: stop-opacity
 
 - name: text
   container: true

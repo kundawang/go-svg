@@ -46,6 +46,42 @@ Output:
 
 ![Output](testdata/triangle01.svg)
 
+## Composing documents
+
+`Compose` places independent SVG documents on one canvas. Each document is
+copied, never mutated, so the same `Document` can be placed repeatedly. IDs
+that collide with an ID already on the canvas are renamed and every reference
+to them (`href`, `url(#...)` in attributes and `<style>` content, and CSS ID
+selectors) is rewritten, so two documents that both define `#badge-gradient`
+keep their own gradients.
+
+```go
+first := svg.NewDocument("first", svg.New().ViewBox(0, 0, 120, 40).AppendChildren(/* ... */))
+second := svg.NewDocument("second", svg.New().ViewBox(0, 0, 120, 40).AppendChildren(/* ... */))
+
+canvas, err := svg.Compose(
+    svg.Placement{Document: first},
+    svg.Placement{Document: second}.At(130, 0),
+)
+if err != nil {
+    panic(err)
+}
+```
+
+A document that defines a viewport (a `viewBox`, or a width and a height) is
+wrapped in a nested `<svg>` element, so its user coordinates, percentage
+lengths, `preserveAspectRatio`, and viewport clipping are preserved. A
+`<defs>` element keeps only the entries reachable from rendered content,
+following `href` and `url(#...)` chains.
+
+`Compose` is strict: it rejects `viewBox` values that are not four finite
+numbers with positive width and height (`ErrInvalidViewBox`), documents that
+define the same ID twice (`ErrAmbiguousID`), references to undefined IDs
+(`ErrUnresolvedReference`), reference cycles (`ErrCircularReference`), and
+references to resources outside the document (`ErrExternalReference`). On any
+error it returns a nil canvas and leaves an existing canvas untouched. Use
+`ComposeInto` to add to an existing canvas.
+
 ## Dynamic example
 
 See [`cmd/svgclock`](https://github.com/twpayne/go-svg/tree/master/cmd/svgclock).

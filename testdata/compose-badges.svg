@@ -1,0 +1,30 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <svg height="40" overflow="hidden" viewBox="0 0 120 40" width="120">
+    <defs>
+      <linearGradient id="badge-gradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#123456"></stop>
+        <stop offset="1" stop-color="#654321"></stop>
+      </linearGradient>
+      <clipPath id="badge-clip">
+        <rect height="40" rx="6" ry="6" width="120" x="0" y="0"></rect>
+      </clipPath>
+    </defs>
+    <rect clip-path="url(#badge-clip)" fill="url(#badge-gradient)" height="40" width="120" x="0" y="0"></rect>
+    <text fill="white" text-anchor="middle" x="60" y="26">alpha</text>
+  </svg>
+  <g transform="translate(130 0)">
+    <svg height="40" overflow="hidden" viewBox="0 0 120 40" width="120">
+      <defs>
+        <linearGradient id="beta-2-badge-gradient" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#00ff00"></stop>
+          <stop offset="1" stop-color="#0000ff"></stop>
+        </linearGradient>
+        <clipPath id="beta-2-badge-clip">
+          <rect height="40" rx="6" ry="6" width="120" x="0" y="0"></rect>
+        </clipPath>
+      </defs>
+      <rect clip-path="url(#beta-2-badge-clip)" fill="url(#beta-2-badge-gradient)" height="40" width="120" x="0" y="0"></rect>
+      <text fill="white" text-anchor="middle" x="60" y="26">beta</text>
+    </svg>
+  </g>
+</svg>

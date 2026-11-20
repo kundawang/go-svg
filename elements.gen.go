@@ -3363,6 +3363,463 @@ func (e *LineElement) MarshalXML(encoder *xml.Encoder, _ xml.StartElement) error
 	return encodeElement(encoder, "line", e.Attrs, e.Children)
 }
 
+// A LinearGradientElement is a linearGradient element.
+type LinearGradientElement struct {
+	Attrs    map[string]AttrValue
+	Children []Element
+}
+
+// LinearGradient returns a new LinearGradientElement.
+func LinearGradient(children ...Element) *LinearGradientElement {
+	return &LinearGradientElement{
+		Attrs:    map[string]AttrValue{},
+		Children: children,
+	}
+}
+
+// AppendChildren appends the given children.
+func (e *LinearGradientElement) AppendChildren(children ...Element) *LinearGradientElement {
+	e.Children = append(e.Children, children...)
+	return e
+}
+
+// ID sets the id attribute.
+func (e *LinearGradientElement) ID(id String) *LinearGradientElement {
+	e.Attrs["id"] = id
+	return e
+}
+
+// TabIndex sets the tabindex attribute.
+func (e *LinearGradientElement) TabIndex(tabIndex Int) *LinearGradientElement {
+	e.Attrs["tabindex"] = tabIndex
+	return e
+}
+
+// Lang sets the lang attribute.
+func (e *LinearGradientElement) Lang(lang String) *LinearGradientElement {
+	e.Attrs["lang"] = lang
+	return e
+}
+
+// Class sets the class attribute.
+func (e *LinearGradientElement) Class(class String) *LinearGradientElement {
+	e.Attrs["class"] = class
+	return e
+}
+
+// Style sets the style attribute.
+func (e *LinearGradientElement) Style(style String) *LinearGradientElement {
+	e.Attrs["style"] = style
+	return e
+}
+
+// AlignmentBaseline sets the alignment-baseline attribute.
+func (e *LinearGradientElement) AlignmentBaseline(alignmentBaseline String) *LinearGradientElement {
+	e.Attrs["alignment-baseline"] = alignmentBaseline
+	return e
+}
+
+// BaselineShift sets the baseline-shift attribute.
+func (e *LinearGradientElement) BaselineShift(baselineShift String) *LinearGradientElement {
+	e.Attrs["baseline-shift"] = baselineShift
+	return e
+}
+
+// ClipPath sets the clip-path attribute.
+func (e *LinearGradientElement) ClipPath(clipPath String) *LinearGradientElement {
+	e.Attrs["clip-path"] = clipPath
+	return e
+}
+
+// ClipRule sets the clip-rule attribute.
+func (e *LinearGradientElement) ClipRule(clipRule String) *LinearGradientElement {
+	e.Attrs["clip-rule"] = clipRule
+	return e
+}
+
+// Color sets the color attribute.
+func (e *LinearGradientElement) Color(color String) *LinearGradientElement {
+	e.Attrs["color"] = color
+	return e
+}
+
+// ColorInterpolation sets the color-interpolation attribute.
+func (e *LinearGradientElement) ColorInterpolation(colorInterpolation String) *LinearGradientElement {
+	e.Attrs["color-interpolation"] = colorInterpolation
+	return e
+}
+
+// ColorInterpolationFilters sets the color-interpolation-filters attribute.
+func (e *LinearGradientElement) ColorInterpolationFilters(colorInterpolationFilters String) *LinearGradientElement {
+	e.Attrs["color-interpolation-filters"] = colorInterpolationFilters
+	return e
+}
+
+// ColorRendering sets the color-rendering attribute.
+func (e *LinearGradientElement) ColorRendering(colorRendering String) *LinearGradientElement {
+	e.Attrs["color-rendering"] = colorRendering
+	return e
+}
+
+// Cursor sets the cursor attribute.
+func (e *LinearGradientElement) Cursor(cursor String) *LinearGradientElement {
+	e.Attrs["cursor"] = cursor
+	return e
+}
+
+// Direction sets the direction attribute.
+func (e *LinearGradientElement) Direction(direction String) *LinearGradientElement {
+	e.Attrs["direction"] = direction
+	return e
+}
+
+// Display sets the display attribute.
+func (e *LinearGradientElement) Display(display String) *LinearGradientElement {
+	e.Attrs["display"] = display
+	return e
+}
+
+// DominantBaseline sets the dominant-baseline attribute.
+func (e *LinearGradientElement) DominantBaseline(dominantBaseline String) *LinearGradientElement {
+	e.Attrs["dominant-baseline"] = dominantBaseline
+	return e
+}
+
+// Fill sets the fill attribute.
+func (e *LinearGradientElement) Fill(fill String) *LinearGradientElement {
+	e.Attrs["fill"] = fill
+	return e
+}
+
+// FillOpacity sets the fill-opacity attribute.
+func (e *LinearGradientElement) FillOpacity(fillOpacity Float64) *LinearGradientElement {
+	e.Attrs["fill-opacity"] = fillOpacity
+	return e
+}
+
+// FillRule sets the fill-rule attribute.
+func (e *LinearGradientElement) FillRule(fillRule String) *LinearGradientElement {
+	e.Attrs["fill-rule"] = fillRule
+	return e
+}
+
+// Filter sets the filter attribute.
+func (e *LinearGradientElement) Filter(filter String) *LinearGradientElement {
+	e.Attrs["filter"] = filter
+	return e
+}
+
+// FloodColor sets the flood-color attribute.
+func (e *LinearGradientElement) FloodColor(floodColor String) *LinearGradientElement {
+	e.Attrs["flood-color"] = floodColor
+	return e
+}
+
+// FloodOpacity sets the flood-opacity attribute.
+func (e *LinearGradientElement) FloodOpacity(floodOpacity Float64) *LinearGradientElement {
+	e.Attrs["flood-opacity"] = floodOpacity
+	return e
+}
+
+// FontFamily sets the font-family attribute.
+func (e *LinearGradientElement) FontFamily(fontFamily String) *LinearGradientElement {
+	e.Attrs["font-family"] = fontFamily
+	return e
+}
+
+// FontSize sets the font-size attribute.
+func (e *LinearGradientElement) FontSize(fontSize String) *LinearGradientElement {
+	e.Attrs["font-size"] = fontSize
+	return e
+}
+
+// FontSizeAdjust sets the font-size-adjust attribute.
+func (e *LinearGradientElement) FontSizeAdjust(fontSizeAdjust String) *LinearGradientElement {
+	e.Attrs["font-size-adjust"] = fontSizeAdjust
+	return e
+}
+
+// FontStretch sets the font-stretch attribute.
+func (e *LinearGradientElement) FontStretch(fontStretch String) *LinearGradientElement {
+	e.Attrs["font-stretch"] = fontStretch
+	return e
+}
+
+// FontStyle sets the font-style attribute.
+func (e *LinearGradientElement) FontStyle(fontStyle String) *LinearGradientElement {
+	e.Attrs["font-style"] = fontStyle
+	return e
+}
+
+// FontVariant sets the font-variant attribute.
+func (e *LinearGradientElement) FontVariant(fontVariant String) *LinearGradientElement {
+	e.Attrs["font-variant"] = fontVariant
+	return e
+}
+
+// FontWeight sets the font-weight attribute.
+func (e *LinearGradientElement) FontWeight(fontWeight String) *LinearGradientElement {
+	e.Attrs["font-weight"] = fontWeight
+	return e
+}
+
+// GlyphOrientationHorizontal sets the glyph-orientation-horizontal attribute.
+func (e *LinearGradientElement) GlyphOrientationHorizontal(glyphOrientationHorizontal String) *LinearGradientElement {
+	e.Attrs["glyph-orientation-horizontal"] = glyphOrientationHorizontal
+	return e
+}
+
+// GlyphOrientationVertical sets the glyph-orientation-vertical attribute.
+func (e *LinearGradientElement) GlyphOrientationVertical(glyphOrientationVertical String) *LinearGradientElement {
+	e.Attrs["glyph-orientation-vertical"] = glyphOrientationVertical
+	return e
+}
+
+// ImageRendering sets the image-rendering attribute.
+func (e *LinearGradientElement) ImageRendering(imageRendering String) *LinearGradientElement {
+	e.Attrs["image-rendering"] = imageRendering
+	return e
+}
+
+// LetterSpacing sets the letter-spacing attribute.
+func (e *LinearGradientElement) LetterSpacing(letterSpacing String) *LinearGradientElement {
+	e.Attrs["letter-spacing"] = letterSpacing
+	return e
+}
+
+// LightingColor sets the lighting-color attribute.
+func (e *LinearGradientElement) LightingColor(lightingColor String) *LinearGradientElement {
+	e.Attrs["lighting-color"] = lightingColor
+	return e
+}
+
+// MarkerEnd sets the marker-end attribute.
+func (e *LinearGradientElement) MarkerEnd(markerEnd String) *LinearGradientElement {
+	e.Attrs["marker-end"] = markerEnd
+	return e
+}
+
+// MarkerMid sets the marker-mid attribute.
+func (e *LinearGradientElement) MarkerMid(markerMid String) *LinearGradientElement {
+	e.Attrs["marker-mid"] = markerMid
+	return e
+}
+
+// MarkerStart sets the marker-start attribute.
+func (e *LinearGradientElement) MarkerStart(markerStart String) *LinearGradientElement {
+	e.Attrs["marker-start"] = markerStart
+	return e
+}
+
+// Mask sets the mask attribute.
+func (e *LinearGradientElement) Mask(mask String) *LinearGradientElement {
+	e.Attrs["mask"] = mask
+	return e
+}
+
+// Opacity sets the opacity attribute.
+func (e *LinearGradientElement) Opacity(opacity Float64) *LinearGradientElement {
+	e.Attrs["opacity"] = opacity
+	return e
+}
+
+// Overflow sets the overflow attribute.
+func (e *LinearGradientElement) Overflow(overflow String) *LinearGradientElement {
+	e.Attrs["overflow"] = overflow
+	return e
+}
+
+// PaintOrder sets the paint-order attribute.
+func (e *LinearGradientElement) PaintOrder(paintOrder String) *LinearGradientElement {
+	e.Attrs["paint-order"] = paintOrder
+	return e
+}
+
+// PointerEvents sets the pointer-events attribute.
+func (e *LinearGradientElement) PointerEvents(pointerEvents String) *LinearGradientElement {
+	e.Attrs["pointer-events"] = pointerEvents
+	return e
+}
+
+// ShapeRendering sets the shape-rendering attribute.
+func (e *LinearGradientElement) ShapeRendering(shapeRendering String) *LinearGradientElement {
+	e.Attrs["shape-rendering"] = shapeRendering
+	return e
+}
+
+// StopColor sets the stop-color attribute.
+func (e *LinearGradientElement) StopColor(stopColor String) *LinearGradientElement {
+	e.Attrs["stop-color"] = stopColor
+	return e
+}
+
+// StopOpacity sets the stop-opacity attribute.
+func (e *LinearGradientElement) StopOpacity(stopOpacity Float64) *LinearGradientElement {
+	e.Attrs["stop-opacity"] = stopOpacity
+	return e
+}
+
+// Stroke sets the stroke attribute.
+func (e *LinearGradientElement) Stroke(stroke String) *LinearGradientElement {
+	e.Attrs["stroke"] = stroke
+	return e
+}
+
+// StrokeDashArray sets the stroke-dasharray attribute.
+func (e *LinearGradientElement) StrokeDashArray(strokeDashArray String) *LinearGradientElement {
+	e.Attrs["stroke-dasharray"] = strokeDashArray
+	return e
+}
+
+// StrokeDashOffset sets the stroke-dashoffset attribute.
+func (e *LinearGradientElement) StrokeDashOffset(strokeDashOffset Float64) *LinearGradientElement {
+	e.Attrs["stroke-dashoffset"] = strokeDashOffset
+	return e
+}
+
+// StrokeLineCap sets the stroke-linecap attribute.
+func (e *LinearGradientElement) StrokeLineCap(strokeLineCap String) *LinearGradientElement {
+	e.Attrs["stroke-linecap"] = strokeLineCap
+	return e
+}
+
+// StrokeLineJoin sets the stroke-linejoin attribute.
+func (e *LinearGradientElement) StrokeLineJoin(strokeLineJoin String) *LinearGradientElement {
+	e.Attrs["stroke-linejoin"] = strokeLineJoin
+	return e
+}
+
+// StrokeMiterLimit sets the stroke-miterlimit attribute.
+func (e *LinearGradientElement) StrokeMiterLimit(strokeMiterLimit Float64) *LinearGradientElement {
+	e.Attrs["stroke-miterlimit"] = strokeMiterLimit
+	return e
+}
+
+// StrokeOpacity sets the stroke-opacity attribute.
+func (e *LinearGradientElement) StrokeOpacity(strokeOpacity Float64) *LinearGradientElement {
+	e.Attrs["stroke-opacity"] = strokeOpacity
+	return e
+}
+
+// StrokeWidth sets the stroke-width attribute.
+func (e *LinearGradientElement) StrokeWidth(strokeWidth Length) *LinearGradientElement {
+	e.Attrs["stroke-width"] = strokeWidth
+	return e
+}
+
+// TextAnchor sets the text-anchor attribute.
+func (e *LinearGradientElement) TextAnchor(textAnchor String) *LinearGradientElement {
+	e.Attrs["text-anchor"] = textAnchor
+	return e
+}
+
+// TextDecoration sets the text-decoration attribute.
+func (e *LinearGradientElement) TextDecoration(textDecoration String) *LinearGradientElement {
+	e.Attrs["text-decoration"] = textDecoration
+	return e
+}
+
+// TextOverflow sets the text-overflow attribute.
+func (e *LinearGradientElement) TextOverflow(textOverflow String) *LinearGradientElement {
+	e.Attrs["text-overflow"] = textOverflow
+	return e
+}
+
+// TextRendering sets the text-rendering attribute.
+func (e *LinearGradientElement) TextRendering(textRendering String) *LinearGradientElement {
+	e.Attrs["text-rendering"] = textRendering
+	return e
+}
+
+// UnicodeBiDi sets the unicode-bidi attribute.
+func (e *LinearGradientElement) UnicodeBiDi(unicodeBiDi String) *LinearGradientElement {
+	e.Attrs["unicode-bidi"] = unicodeBiDi
+	return e
+}
+
+// VectorEffect sets the vector-effect attribute.
+func (e *LinearGradientElement) VectorEffect(vectorEffect String) *LinearGradientElement {
+	e.Attrs["vector-effect"] = vectorEffect
+	return e
+}
+
+// Visibility sets the visibility attribute.
+func (e *LinearGradientElement) Visibility(visibility String) *LinearGradientElement {
+	e.Attrs["visibility"] = visibility
+	return e
+}
+
+// WhiteSpace sets the white-space attribute.
+func (e *LinearGradientElement) WhiteSpace(whiteSpace String) *LinearGradientElement {
+	e.Attrs["white-space"] = whiteSpace
+	return e
+}
+
+// WordSpacing sets the word-spacing attribute.
+func (e *LinearGradientElement) WordSpacing(wordSpacing String) *LinearGradientElement {
+	e.Attrs["word-spacing"] = wordSpacing
+	return e
+}
+
+// WritingMode sets the writing-mode attribute.
+func (e *LinearGradientElement) WritingMode(writingMode String) *LinearGradientElement {
+	e.Attrs["writing-mode"] = writingMode
+	return e
+}
+
+// GradientUnits sets the gradientUnits attribute.
+func (e *LinearGradientElement) GradientUnits(gradientUnits String) *LinearGradientElement {
+	e.Attrs["gradientUnits"] = gradientUnits
+	return e
+}
+
+// GradientTransform sets the gradientTransform attribute.
+func (e *LinearGradientElement) GradientTransform(gradientTransform String) *LinearGradientElement {
+	e.Attrs["gradientTransform"] = gradientTransform
+	return e
+}
+
+// Href sets the href attribute.
+func (e *LinearGradientElement) Href(href String) *LinearGradientElement {
+	e.Attrs["href"] = href
+	return e
+}
+
+// SpreadMethod sets the spreadMethod attribute.
+func (e *LinearGradientElement) SpreadMethod(spreadMethod String) *LinearGradientElement {
+	e.Attrs["spreadMethod"] = spreadMethod
+	return e
+}
+
+// X1 sets the x1 attribute.
+func (e *LinearGradientElement) X1(x1 String) *LinearGradientElement {
+	e.Attrs["x1"] = x1
+	return e
+}
+
+// Y1 sets the y1 attribute.
+func (e *LinearGradientElement) Y1(y1 String) *LinearGradientElement {
+	e.Attrs["y1"] = y1
+	return e
+}
+
+// X2 sets the x2 attribute.
+func (e *LinearGradientElement) X2(x2 String) *LinearGradientElement {
+	e.Attrs["x2"] = x2
+	return e
+}
+
+// Y2 sets the y2 attribute.
+func (e *LinearGradientElement) Y2(y2 String) *LinearGradientElement {
+	e.Attrs["y2"] = y2
+	return e
+}
+
+// MarshallXML implements encoding/xml.Marshaller.MarshalXML.
+func (e *LinearGradientElement) MarshalXML(encoder *xml.Encoder, _ xml.StartElement) error {
+	return encodeElement(encoder, "linearGradient", e.Attrs, e.Children)
+}
+
 // A MarkerElement is a marker element.
 type MarkerElement struct {
 	Attrs    map[string]AttrValue
@@ -7396,6 +7853,518 @@ func (e *SymbolElement) XYWidthHeight(x, y, width, height float64, lengthFunc Le
 // MarshallXML implements encoding/xml.Marshaller.MarshalXML.
 func (e *SymbolElement) MarshalXML(encoder *xml.Encoder, _ xml.StartElement) error {
 	return encodeElement(encoder, "symbol", e.Attrs, e.Children)
+}
+
+// A RadialGradientElement is a radialGradient element.
+type RadialGradientElement struct {
+	Attrs    map[string]AttrValue
+	Children []Element
+}
+
+// RadialGradient returns a new RadialGradientElement.
+func RadialGradient(children ...Element) *RadialGradientElement {
+	return &RadialGradientElement{
+		Attrs:    map[string]AttrValue{},
+		Children: children,
+	}
+}
+
+// AppendChildren appends the given children.
+func (e *RadialGradientElement) AppendChildren(children ...Element) *RadialGradientElement {
+	e.Children = append(e.Children, children...)
+	return e
+}
+
+// ID sets the id attribute.
+func (e *RadialGradientElement) ID(id String) *RadialGradientElement {
+	e.Attrs["id"] = id
+	return e
+}
+
+// TabIndex sets the tabindex attribute.
+func (e *RadialGradientElement) TabIndex(tabIndex Int) *RadialGradientElement {
+	e.Attrs["tabindex"] = tabIndex
+	return e
+}
+
+// Lang sets the lang attribute.
+func (e *RadialGradientElement) Lang(lang String) *RadialGradientElement {
+	e.Attrs["lang"] = lang
+	return e
+}
+
+// Class sets the class attribute.
+func (e *RadialGradientElement) Class(class String) *RadialGradientElement {
+	e.Attrs["class"] = class
+	return e
+}
+
+// Style sets the style attribute.
+func (e *RadialGradientElement) Style(style String) *RadialGradientElement {
+	e.Attrs["style"] = style
+	return e
+}
+
+// AlignmentBaseline sets the alignment-baseline attribute.
+func (e *RadialGradientElement) AlignmentBaseline(alignmentBaseline String) *RadialGradientElement {
+	e.Attrs["alignment-baseline"] = alignmentBaseline
+	return e
+}
+
+// BaselineShift sets the baseline-shift attribute.
+func (e *RadialGradientElement) BaselineShift(baselineShift String) *RadialGradientElement {
+	e.Attrs["baseline-shift"] = baselineShift
+	return e
+}
+
+// ClipPath sets the clip-path attribute.
+func (e *RadialGradientElement) ClipPath(clipPath String) *RadialGradientElement {
+	e.Attrs["clip-path"] = clipPath
+	return e
+}
+
+// ClipRule sets the clip-rule attribute.
+func (e *RadialGradientElement) ClipRule(clipRule String) *RadialGradientElement {
+	e.Attrs["clip-rule"] = clipRule
+	return e
+}
+
+// Color sets the color attribute.
+func (e *RadialGradientElement) Color(color String) *RadialGradientElement {
+	e.Attrs["color"] = color
+	return e
+}
+
+// ColorInterpolation sets the color-interpolation attribute.
+func (e *RadialGradientElement) ColorInterpolation(colorInterpolation String) *RadialGradientElement {
+	e.Attrs["color-interpolation"] = colorInterpolation
+	return e
+}
+
+// ColorInterpolationFilters sets the color-interpolation-filters attribute.
+func (e *RadialGradientElement) ColorInterpolationFilters(colorInterpolationFilters String) *RadialGradientElement {
+	e.Attrs["color-interpolation-filters"] = colorInterpolationFilters
+	return e
+}
+
+// ColorRendering sets the color-rendering attribute.
+func (e *RadialGradientElement) ColorRendering(colorRendering String) *RadialGradientElement {
+	e.Attrs["color-rendering"] = colorRendering
+	return e
+}
+
+// Cursor sets the cursor attribute.
+func (e *RadialGradientElement) Cursor(cursor String) *RadialGradientElement {
+	e.Attrs["cursor"] = cursor
+	return e
+}
+
+// Direction sets the direction attribute.
+func (e *RadialGradientElement) Direction(direction String) *RadialGradientElement {
+	e.Attrs["direction"] = direction
+	return e
+}
+
+// Display sets the display attribute.
+func (e *RadialGradientElement) Display(display String) *RadialGradientElement {
+	e.Attrs["display"] = display
+	return e
+}
+
+// DominantBaseline sets the dominant-baseline attribute.
+func (e *RadialGradientElement) DominantBaseline(dominantBaseline String) *RadialGradientElement {
+	e.Attrs["dominant-baseline"] = dominantBaseline
+	return e
+}
+
+// Fill sets the fill attribute.
+func (e *RadialGradientElement) Fill(fill String) *RadialGradientElement {
+	e.Attrs["fill"] = fill
+	return e
+}
+
+// FillOpacity sets the fill-opacity attribute.
+func (e *RadialGradientElement) FillOpacity(fillOpacity Float64) *RadialGradientElement {
+	e.Attrs["fill-opacity"] = fillOpacity
+	return e
+}
+
+// FillRule sets the fill-rule attribute.
+func (e *RadialGradientElement) FillRule(fillRule String) *RadialGradientElement {
+	e.Attrs["fill-rule"] = fillRule
+	return e
+}
+
+// Filter sets the filter attribute.
+func (e *RadialGradientElement) Filter(filter String) *RadialGradientElement {
+	e.Attrs["filter"] = filter
+	return e
+}
+
+// FloodColor sets the flood-color attribute.
+func (e *RadialGradientElement) FloodColor(floodColor String) *RadialGradientElement {
+	e.Attrs["flood-color"] = floodColor
+	return e
+}
+
+// FloodOpacity sets the flood-opacity attribute.
+func (e *RadialGradientElement) FloodOpacity(floodOpacity Float64) *RadialGradientElement {
+	e.Attrs["flood-opacity"] = floodOpacity
+	return e
+}
+
+// FontFamily sets the font-family attribute.
+func (e *RadialGradientElement) FontFamily(fontFamily String) *RadialGradientElement {
+	e.Attrs["font-family"] = fontFamily
+	return e
+}
+
+// FontSize sets the font-size attribute.
+func (e *RadialGradientElement) FontSize(fontSize String) *RadialGradientElement {
+	e.Attrs["font-size"] = fontSize
+	return e
+}
+
+// FontSizeAdjust sets the font-size-adjust attribute.
+func (e *RadialGradientElement) FontSizeAdjust(fontSizeAdjust String) *RadialGradientElement {
+	e.Attrs["font-size-adjust"] = fontSizeAdjust
+	return e
+}
+
+// FontStretch sets the font-stretch attribute.
+func (e *RadialGradientElement) FontStretch(fontStretch String) *RadialGradientElement {
+	e.Attrs["font-stretch"] = fontStretch
+	return e
+}
+
+// FontStyle sets the font-style attribute.
+func (e *RadialGradientElement) FontStyle(fontStyle String) *RadialGradientElement {
+	e.Attrs["font-style"] = fontStyle
+	return e
+}
+
+// FontVariant sets the font-variant attribute.
+func (e *RadialGradientElement) FontVariant(fontVariant String) *RadialGradientElement {
+	e.Attrs["font-variant"] = fontVariant
+	return e
+}
+
+// FontWeight sets the font-weight attribute.
+func (e *RadialGradientElement) FontWeight(fontWeight String) *RadialGradientElement {
+	e.Attrs["font-weight"] = fontWeight
+	return e
+}
+
+// GlyphOrientationHorizontal sets the glyph-orientation-horizontal attribute.
+func (e *RadialGradientElement) GlyphOrientationHorizontal(glyphOrientationHorizontal String) *RadialGradientElement {
+	e.Attrs["glyph-orientation-horizontal"] = glyphOrientationHorizontal
+	return e
+}
+
+// GlyphOrientationVertical sets the glyph-orientation-vertical attribute.
+func (e *RadialGradientElement) GlyphOrientationVertical(glyphOrientationVertical String) *RadialGradientElement {
+	e.Attrs["glyph-orientation-vertical"] = glyphOrientationVertical
+	return e
+}
+
+// ImageRendering sets the image-rendering attribute.
+func (e *RadialGradientElement) ImageRendering(imageRendering String) *RadialGradientElement {
+	e.Attrs["image-rendering"] = imageRendering
+	return e
+}
+
+// LetterSpacing sets the letter-spacing attribute.
+func (e *RadialGradientElement) LetterSpacing(letterSpacing String) *RadialGradientElement {
+	e.Attrs["letter-spacing"] = letterSpacing
+	return e
+}
+
+// LightingColor sets the lighting-color attribute.
+func (e *RadialGradientElement) LightingColor(lightingColor String) *RadialGradientElement {
+	e.Attrs["lighting-color"] = lightingColor
+	return e
+}
+
+// MarkerEnd sets the marker-end attribute.
+func (e *RadialGradientElement) MarkerEnd(markerEnd String) *RadialGradientElement {
+	e.Attrs["marker-end"] = markerEnd
+	return e
+}
+
+// MarkerMid sets the marker-mid attribute.
+func (e *RadialGradientElement) MarkerMid(markerMid String) *RadialGradientElement {
+	e.Attrs["marker-mid"] = markerMid
+	return e
+}
+
+// MarkerStart sets the marker-start attribute.
+func (e *RadialGradientElement) MarkerStart(markerStart String) *RadialGradientElement {
+	e.Attrs["marker-start"] = markerStart
+	return e
+}
+
+// Mask sets the mask attribute.
+func (e *RadialGradientElement) Mask(mask String) *RadialGradientElement {
+	e.Attrs["mask"] = mask
+	return e
+}
+
+// Opacity sets the opacity attribute.
+func (e *RadialGradientElement) Opacity(opacity Float64) *RadialGradientElement {
+	e.Attrs["opacity"] = opacity
+	return e
+}
+
+// Overflow sets the overflow attribute.
+func (e *RadialGradientElement) Overflow(overflow String) *RadialGradientElement {
+	e.Attrs["overflow"] = overflow
+	return e
+}
+
+// PaintOrder sets the paint-order attribute.
+func (e *RadialGradientElement) PaintOrder(paintOrder String) *RadialGradientElement {
+	e.Attrs["paint-order"] = paintOrder
+	return e
+}
+
+// PointerEvents sets the pointer-events attribute.
+func (e *RadialGradientElement) PointerEvents(pointerEvents String) *RadialGradientElement {
+	e.Attrs["pointer-events"] = pointerEvents
+	return e
+}
+
+// ShapeRendering sets the shape-rendering attribute.
+func (e *RadialGradientElement) ShapeRendering(shapeRendering String) *RadialGradientElement {
+	e.Attrs["shape-rendering"] = shapeRendering
+	return e
+}
+
+// StopColor sets the stop-color attribute.
+func (e *RadialGradientElement) StopColor(stopColor String) *RadialGradientElement {
+	e.Attrs["stop-color"] = stopColor
+	return e
+}
+
+// StopOpacity sets the stop-opacity attribute.
+func (e *RadialGradientElement) StopOpacity(stopOpacity Float64) *RadialGradientElement {
+	e.Attrs["stop-opacity"] = stopOpacity
+	return e
+}
+
+// Stroke sets the stroke attribute.
+func (e *RadialGradientElement) Stroke(stroke String) *RadialGradientElement {
+	e.Attrs["stroke"] = stroke
+	return e
+}
+
+// StrokeDashArray sets the stroke-dasharray attribute.
+func (e *RadialGradientElement) StrokeDashArray(strokeDashArray String) *RadialGradientElement {
+	e.Attrs["stroke-dasharray"] = strokeDashArray
+	return e
+}
+
+// StrokeDashOffset sets the stroke-dashoffset attribute.
+func (e *RadialGradientElement) StrokeDashOffset(strokeDashOffset Float64) *RadialGradientElement {
+	e.Attrs["stroke-dashoffset"] = strokeDashOffset
+	return e
+}
+
+// StrokeLineCap sets the stroke-linecap attribute.
+func (e *RadialGradientElement) StrokeLineCap(strokeLineCap String) *RadialGradientElement {
+	e.Attrs["stroke-linecap"] = strokeLineCap
+	return e
+}
+
+// StrokeLineJoin sets the stroke-linejoin attribute.
+func (e *RadialGradientElement) StrokeLineJoin(strokeLineJoin String) *RadialGradientElement {
+	e.Attrs["stroke-linejoin"] = strokeLineJoin
+	return e
+}
+
+// StrokeMiterLimit sets the stroke-miterlimit attribute.
+func (e *RadialGradientElement) StrokeMiterLimit(strokeMiterLimit Float64) *RadialGradientElement {
+	e.Attrs["stroke-miterlimit"] = strokeMiterLimit
+	return e
+}
+
+// StrokeOpacity sets the stroke-opacity attribute.
+func (e *RadialGradientElement) StrokeOpacity(strokeOpacity Float64) *RadialGradientElement {
+	e.Attrs["stroke-opacity"] = strokeOpacity
+	return e
+}
+
+// StrokeWidth sets the stroke-width attribute.
+func (e *RadialGradientElement) StrokeWidth(strokeWidth Length) *RadialGradientElement {
+	e.Attrs["stroke-width"] = strokeWidth
+	return e
+}
+
+// TextAnchor sets the text-anchor attribute.
+func (e *RadialGradientElement) TextAnchor(textAnchor String) *RadialGradientElement {
+	e.Attrs["text-anchor"] = textAnchor
+	return e
+}
+
+// TextDecoration sets the text-decoration attribute.
+func (e *RadialGradientElement) TextDecoration(textDecoration String) *RadialGradientElement {
+	e.Attrs["text-decoration"] = textDecoration
+	return e
+}
+
+// TextOverflow sets the text-overflow attribute.
+func (e *RadialGradientElement) TextOverflow(textOverflow String) *RadialGradientElement {
+	e.Attrs["text-overflow"] = textOverflow
+	return e
+}
+
+// TextRendering sets the text-rendering attribute.
+func (e *RadialGradientElement) TextRendering(textRendering String) *RadialGradientElement {
+	e.Attrs["text-rendering"] = textRendering
+	return e
+}
+
+// UnicodeBiDi sets the unicode-bidi attribute.
+func (e *RadialGradientElement) UnicodeBiDi(unicodeBiDi String) *RadialGradientElement {
+	e.Attrs["unicode-bidi"] = unicodeBiDi
+	return e
+}
+
+// VectorEffect sets the vector-effect attribute.
+func (e *RadialGradientElement) VectorEffect(vectorEffect String) *RadialGradientElement {
+	e.Attrs["vector-effect"] = vectorEffect
+	return e
+}
+
+// Visibility sets the visibility attribute.
+func (e *RadialGradientElement) Visibility(visibility String) *RadialGradientElement {
+	e.Attrs["visibility"] = visibility
+	return e
+}
+
+// WhiteSpace sets the white-space attribute.
+func (e *RadialGradientElement) WhiteSpace(whiteSpace String) *RadialGradientElement {
+	e.Attrs["white-space"] = whiteSpace
+	return e
+}
+
+// WordSpacing sets the word-spacing attribute.
+func (e *RadialGradientElement) WordSpacing(wordSpacing String) *RadialGradientElement {
+	e.Attrs["word-spacing"] = wordSpacing
+	return e
+}
+
+// WritingMode sets the writing-mode attribute.
+func (e *RadialGradientElement) WritingMode(writingMode String) *RadialGradientElement {
+	e.Attrs["writing-mode"] = writingMode
+	return e
+}
+
+// GradientUnits sets the gradientUnits attribute.
+func (e *RadialGradientElement) GradientUnits(gradientUnits String) *RadialGradientElement {
+	e.Attrs["gradientUnits"] = gradientUnits
+	return e
+}
+
+// GradientTransform sets the gradientTransform attribute.
+func (e *RadialGradientElement) GradientTransform(gradientTransform String) *RadialGradientElement {
+	e.Attrs["gradientTransform"] = gradientTransform
+	return e
+}
+
+// Href sets the href attribute.
+func (e *RadialGradientElement) Href(href String) *RadialGradientElement {
+	e.Attrs["href"] = href
+	return e
+}
+
+// SpreadMethod sets the spreadMethod attribute.
+func (e *RadialGradientElement) SpreadMethod(spreadMethod String) *RadialGradientElement {
+	e.Attrs["spreadMethod"] = spreadMethod
+	return e
+}
+
+// Cx sets the cx attribute.
+func (e *RadialGradientElement) Cx(cx String) *RadialGradientElement {
+	e.Attrs["cx"] = cx
+	return e
+}
+
+// Cy sets the cy attribute.
+func (e *RadialGradientElement) Cy(cy String) *RadialGradientElement {
+	e.Attrs["cy"] = cy
+	return e
+}
+
+// R sets the r attribute.
+func (e *RadialGradientElement) R(r String) *RadialGradientElement {
+	e.Attrs["r"] = r
+	return e
+}
+
+// Fx sets the fx attribute.
+func (e *RadialGradientElement) Fx(fx String) *RadialGradientElement {
+	e.Attrs["fx"] = fx
+	return e
+}
+
+// Fy sets the fy attribute.
+func (e *RadialGradientElement) Fy(fy String) *RadialGradientElement {
+	e.Attrs["fy"] = fy
+	return e
+}
+
+// Fr sets the fr attribute.
+func (e *RadialGradientElement) Fr(fr String) *RadialGradientElement {
+	e.Attrs["fr"] = fr
+	return e
+}
+
+// MarshallXML implements encoding/xml.Marshaller.MarshalXML.
+func (e *RadialGradientElement) MarshalXML(encoder *xml.Encoder, _ xml.StartElement) error {
+	return encodeElement(encoder, "radialGradient", e.Attrs, e.Children)
+}
+
+// A StopElement is a stop element.
+type StopElement struct {
+	Attrs    map[string]AttrValue
+	Children []Element
+}
+
+// Stop returns a new StopElement.
+func Stop(children ...Element) *StopElement {
+	return &StopElement{
+		Attrs:    map[string]AttrValue{},
+		Children: children,
+	}
+}
+
+// AppendChildren appends the given children.
+func (e *StopElement) AppendChildren(children ...Element) *StopElement {
+	e.Children = append(e.Children, children...)
+	return e
+}
+
+// Offset sets the offset attribute.
+func (e *StopElement) Offset(offset String) *StopElement {
+	e.Attrs["offset"] = offset
+	return e
+}
+
+// StopColor sets the stop-color attribute.
+func (e *StopElement) StopColor(stopColor String) *StopElement {
+	e.Attrs["stop-color"] = stopColor
+	return e
+}
+
+// StopOpacity sets the stop-opacity attribute.
+func (e *StopElement) StopOpacity(stopOpacity String) *StopElement {
+	e.Attrs["stop-opacity"] = stopOpacity
+	return e
+}
+
+// MarshallXML implements encoding/xml.Marshaller.MarshalXML.
+func (e *StopElement) MarshalXML(encoder *xml.Encoder, _ xml.StartElement) error {
+	return encodeElement(encoder, "stop", e.Attrs, e.Children)
 }
 
 // A TextElement is a text element.
